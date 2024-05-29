@@ -35,7 +35,6 @@ const Map = () => {
     fetcher
   );
   const dataMap = data?.data?.mindmaps;
-  console.log(queryStringified);
 
   const pages = useMemo(() => {
     return data?.data?.count ? Math.ceil(data?.data?.count / query.limit) : 0;

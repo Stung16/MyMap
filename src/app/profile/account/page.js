@@ -13,6 +13,7 @@ import Loading from "@/components/mymap/Loading/Loading";
 import { fetcher } from "@/utils/fn";
 
 const Account = () => {
+  const [loading, setLoading] = useState(false);
   const { mutate } = useSWRConfig();
   const {
     register,
@@ -22,28 +23,32 @@ const Account = () => {
     reset,
     formState: { errors },
   } = useForm();
-  const { data, isLoading } = useSWR(`/api/auth/profile`, fetcher);
-  if (isLoading) {
-    return <Loading />;
-  }
   const handleSubmitPassword = async (data) => {
-    if (watch("password") !== watch("rePassword")) {
-      setError("checkPassword", {
-        type: "manual",
-        message: "Passwords do not match",
-      });
-    }
-    if (watch("password") === watch("rePassword")) {
-      const res = await handleChangePassword({
-        password: data.password,
-        repeat_password: data.rePassword,
-      });
-      console.log(res);
-      if (res?.data?.status === 200) {
-        mutate("/api/auth/profile");
-        toast.success("Change password success!");
-        reset();
+    try {
+      setLoading(true);
+      if (watch("password") !== watch("rePassword")) {
+        setError("checkPassword", {
+          type: "manual",
+          message: "Passwords do not match",
+        });
       }
+      if (watch("password") === watch("rePassword")) {
+        const res = await handleChangePassword({
+          password: data.password,
+          repeat_password: data.rePassword,
+        });
+        console.log(res);
+        if (res?.data?.status === 200) {
+          mutate("/api/auth/profile");
+          toast.success("Change password success!");
+          reset();
+        }
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Something error!");
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -109,6 +114,7 @@ const Account = () => {
           </Card>
         </div>
       </div>
+      {loading && <Loading />}
     </div>
   );
 };

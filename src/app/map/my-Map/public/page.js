@@ -22,11 +22,10 @@ const Public = () => {
   const query = {
     page,
     limit: 5,
-    statuss: "false",
+    statuss: "true",
     q: search,
   };
   const queryStringified = queryString.stringify(query);
-  console.log(queryStringified);
   const { data, isLoading } = useSWR(
     `/api/mindmaps?${queryStringified}`,
     fetcher

@@ -87,7 +87,6 @@ const MapDetail = ({ user_id }) => {
   useEffect(() => {
     dispatch(setType(type));
   }, [id]);
-  console.log(isPublic);
   return (
     <div>
       {data?.data?.status === 404 ? (

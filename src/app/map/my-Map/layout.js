@@ -15,8 +15,8 @@ export default function MyMapDefaultLayout({ children }) {
   useEffect(() => {
     dispatch(updateProfile(data?.data?.data));
   }, [data?.data?.data]);
-  if (data?.data.status === 401) {
-    router.push("/");
+  if (data?.data?.status === 401) {
+    router.push("/auth/signin");
   }
   if (isLoading) {
     return <Loading />;
