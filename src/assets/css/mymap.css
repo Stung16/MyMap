@@ -1,0 +1,182 @@
+/* text-updater-node */
+.text-updater-node-1 {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #f9578d;
+  border-radius: 4px;
+  font-size: 12px;
+  min-width: 150px;
+}
+
+.text-updater-node-2 {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #f9578d;
+  border-radius: 4px;
+  font-size: 12px;
+  min-width: 150px;
+}
+.text-updater-node-3 {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #f9578d;
+  border-radius: 4px;
+  font-size: 12px;
+  min-width: 150px;
+}
+.text-updater-node-4 {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #f9578d;
+  border-radius: 4px;
+  font-size: 12px;
+  min-width: 150px;
+}
+.text-updater-node-1.clicked {
+  outline: 0.5px solid #f9578d;
+  border-color: #f9578d;
+}
+.text-updater-node-2.clicked {
+  outline: 0.5px solid #f9578d;
+  border-color: #f9578d;
+}
+
+.node-item {
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.node-item input {
+  outline: none;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  height: 20px;
+  width: 130px;
+  background:transparent;
+}
+
+/* AddNodeOnEdgeDrop */
+.react-flow .react-flow__handle {
+  width: 28px;
+  height: 12px;
+  border-radius: 3px;
+  background-color: #00aaff;
+}
+
+.react-flow .react-flow__handle-top {
+  top: -6px;
+}
+
+.react-flow .react-flow__handle-bottom {
+  bottom: -6px;
+}
+
+.text-updater-node-2 .react-flow__handle {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background-color: #00aaff;
+}
+.text-updater-node-2 .react-flow__handle-left {
+  left: -5px;
+}
+.text-updater-node-2 .react-flow__handle-right {
+  right: -5px;
+}
+
+.react-flow .react-flow__edge path,
+.react-flow__connectionline path {
+  stroke-width: 1.5;
+  stroke: #00aaff;
+}
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: red !important;
+}
+.wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.react-flow__node-input {
+  border-width: 1.5px !important;
+  border-color: #f9578d !important;
+}
+.react-flow__node-input.selectable.selected,
+.react-flow__node-input.selectable:focus {
+  box-shadow: none !important;
+}
+
+/* custom radio */
+input[type="radio"] + label span {
+  transition: background 0.2s, transform 0.2s;
+}
+
+input[type="radio"] + label span:hover,
+input[type="radio"] + label:hover span {
+  transform: scale(1.2);
+}
+
+input[type="radio"]:checked + label span {
+  background-color: #3490dc;
+  box-shadow: 0px 0px 0px 2px white inset;
+}
+
+input[type="radio"]:checked + label {
+  color: #3490dc;
+}
+
+.mode:has([type="radio"]#radio1:checked) ~ .public {
+  display: none;
+}
+.mode:has([type="radio"]#radio2:checked) ~ .private {
+  display: none;
+}
+
+.clipboard:hover + .copy {
+  opacity: 1;
+}
+
+/* Loading */
+
+.loader {
+  border: 6px solid rgba(246, 219, 225, 0.88);
+  border-top-color: #da2884;
+  border-radius: 50%;
+  width: 3.2rem;
+  height: 3.2rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*  */
+.avatar,
+.dropdown-avt {
+  transition: all 0.3s ease;
+}
+.avatar:hover {
+  scale: 0.95;
+}
+div:has(.show-avatar) .avatar {
+  border-color: #00aaff;
+  scale: 0.95;
+}
+
+.show-avatar {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.3s ease;
+}
+.inputnone {
+  border: none;
+  outline: none;
+}
+.showInput{
+    border: 1px solid #ccc;
+}
