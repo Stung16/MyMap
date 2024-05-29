@@ -17,7 +17,7 @@ export default function ProfileLayout({ children }) {
     dispatch(updateProfile(data?.data?.data));
   }, [data?.data?.data]);
   if (data?.data?.status === 401) {
-    router?.push("/auth/signin");
+    return (window.location.href = "/auth/signin");
   }
   if (isLoading) {
     return <Loading />;
