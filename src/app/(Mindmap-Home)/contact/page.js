@@ -1,3 +1,4 @@
+import Image from "next/image";
 export const metadata = {
   title: "Contact | Mindmap",
   description: "Collaborative Mind Mapping",
@@ -22,11 +23,11 @@ const Contact = () => {
             <ul className="flex flex-col gap-8 mt-8">
               <li className="flex items-center gap-6">
                 <div className="w-[26px] h-[26px] bg-black rounded-full flex items-center justify-center">
-                  <img
-                    width="20"
-                    height="20"
-                    alt="img"
+                  <Image
                     src="https://res.cloudinary.com/williamsondesign/check-white.svg"
+                    width={20}
+                    height={20}
+                    alt="img"
                   />
                 </div>
                 <p className="text-gray1 font-[300] text-lg">
@@ -35,11 +36,11 @@ const Contact = () => {
               </li>
               <li className="flex items-center gap-6">
                 <div className="w-[26px] h-[26px] bg-black rounded-full flex items-center justify-center">
-                  <img
-                    width="20"
-                    height="20"
-                    alt="img"
+                  <Image
                     src="https://res.cloudinary.com/williamsondesign/check-white.svg"
+                    width={20}
+                    height={20}
+                    alt="img"
                   />
                 </div>
                 <p className="text-gray1 font-[300] text-lg">
@@ -48,11 +49,11 @@ const Contact = () => {
               </li>
               <li className="flex items-center gap-6">
                 <div className="w-[26px] h-[26px] bg-black rounded-full flex items-center justify-center">
-                  <img
-                    width="20"
-                    height="20"
-                    alt="img"
+                <Image
                     src="https://res.cloudinary.com/williamsondesign/check-white.svg"
+                    width={20}
+                    height={20}
+                    alt="img"
                   />
                 </div>
                 <p className="text-gray1 font-[300] text-lg">

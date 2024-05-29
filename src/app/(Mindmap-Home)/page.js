@@ -26,11 +26,7 @@ export default function Home() {
             className="px-[20px] py-[30px] rounded-[40px] min-w-[250px] min-h-[200px] flex flex-col items-center justify-center"
             style={{ background: "rgba(0,0,0,0.05)" }}
           >
-            <img
-              src={"./img/iconH-1.svg"}
-              className="h-[3.75rem] w-auto object-cover"
-              alt="icon"
-            />
+            <Image src="./img/iconH-1.svg" height={60} width={60} alt="icon" />
             <h4 className="mt-auto text-xl font-thin text-center black text-x">
               <p className="text-xl font-bold">Visualize</p>
               your ideas
@@ -40,11 +36,7 @@ export default function Home() {
             className="px-[20px] py-[30px] rounded-[40px] min-w-[250px] min-h-[200px] flex flex-col items-center justify-center"
             style={{ background: "rgba(0,0,0,0.05)" }}
           >
-            <img
-              src={"./img/iconH-2.svg"}
-              className="h-[3.75rem] w-auto object-cover"
-              alt="icon"
-            />
+            <Image src="./img/iconH-2.svg" height={60} width={60} alt="icon" />
             <h4 className="mt-auto text-xl font-thin text-center black text-x">
               <p className="text-xl font-bold">Collaborate</p>
               with your team
@@ -54,11 +46,7 @@ export default function Home() {
             className="px-[20px] py-[30px] rounded-[40px] min-w-[250px] min-h-[200px] flex flex-col items-center justify-center"
             style={{ background: "rgba(0,0,0,0.05)" }}
           >
-            <img
-              src={"./img/iconH-3.svg"}
-              className="h-[3.75rem] w-auto object-cover"
-              alt="icon"
-            />
+            <Image src="./img/iconH-3.svg" height={60} width={60} alt="icon" />
             <h4 className="mt-auto text-xl font-thin text-center black text-x">
               <p className="text-xl font-bold">Manage</p>
               your tasks
@@ -68,11 +56,7 @@ export default function Home() {
             className="px-[20px] py-[30px] rounded-[40px] min-w-[250px] min-h-[200px] flex flex-col items-center justify-center"
             style={{ background: "rgba(0,0,0,0.05)" }}
           >
-            <img
-              src={"./img/iconH-4.svg"}
-              className="h-[3.75rem] w-auto object-cover"
-              alt="icon"
-            />
+            <Image src="./img/iconH-4.svg" height={60} width={60} alt="icon" />
             <h4 className="mt-auto text-xl font-thin text-center black text-x">
               <p className="text-xl font-bold">Share</p>
               with the world

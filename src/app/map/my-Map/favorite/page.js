@@ -1,6 +1,6 @@
 "use client";
 import { v4 as uuidv4 } from "uuid";
-import "../../../assets/css/style.css";
+import "../../../../assets/css/style.css";
 import FavoriteIcon from "@/assets/icons/FavoriteIcon";
 import { userSlice } from "@/redux/slice/userSlice";
 const { updateLoading } = userSlice.actions;
