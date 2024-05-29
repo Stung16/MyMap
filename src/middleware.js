@@ -6,7 +6,7 @@ export async function middleware(request) {
   const cookieStore = cookies();
   const token = cookieStore.get("accessToken");
   const path = request.nextUrl.pathname;
-  const id = path.replace("/mind-maps/", "");
+  const id = path.replace("/map/", "");
   const response = await fetch(`${process.env.SERVER_API}/api/mindmaps/${id}`);
   const data = await response.json();
   if (data?.mindmap?.status) {
@@ -23,5 +23,5 @@ export async function middleware(request) {
 }
 
 export const config = {
-  matcher: ["/mind-maps/:path*"],
+  matcher: ["/map/:path*"],
 };
