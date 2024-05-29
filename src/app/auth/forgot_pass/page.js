@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { handleForgotPas } from "@/services/auth.service";
 import React from "react";
 import { useForm } from "react-hook-form";
