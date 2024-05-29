@@ -1,4 +1,5 @@
 import "../../assets/css/style.css";
+import Image from "next/image";
 import BtnRedirect from "@/components/mymap/avatar/BtnRedirect";
 export const metadata = {
   title: "Home | Mindmap",
