@@ -74,11 +74,7 @@ export default function Home() {
             ideas, add context to each topic with links, attachments, embeds and
             integrations. Do more with your ideas.
           </p>
-          <img
-            src={"./img/chart.svg"}
-            className="object-cover w-full h-auto mt-12"
-            alt="chart"
-          />
+          <Image src="./img/chart.svg" height={100} width={100} alt="chart" />
         </section>
       </main>
     </div>
