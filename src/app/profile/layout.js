@@ -10,7 +10,6 @@ import { useRouter } from "next/navigation";
 const { updateProfile } = userSlice.actions;
 
 export default function ProfileLayout({ children }) {
-  const router = useRouter();
   const dispatch = useDispatch();
   const { data, isLoading } = useSWR(`/api/auth/profile`, fetcher);
   useEffect(() => {
