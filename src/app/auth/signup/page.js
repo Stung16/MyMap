@@ -5,15 +5,13 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
-import Cookies from "js-cookie";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import Client from "@/config/Client";
+import { useState } from "react";
 import Loading from "@/components/mymap/Loading/Loading";
 import { handleLoginWithGoogle, handleResgiter } from "@/services/auth.service";
 
-const page = () => {
+const SignUp = () => {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const handleRedirect = async () => {
@@ -128,4 +126,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default SignUp;

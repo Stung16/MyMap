@@ -18,7 +18,7 @@ import { useForm } from "react-hook-form";
 import { updateUser } from "@/services/auth.service";
 import Loading from "@/components/mymap/Loading/Loading";
 import { fetcher } from "@/utils/fn";
-const page = () => {
+const Profile = () => {
   const { mutate } = useSWRConfig();
   const profile = useSelector((state) => state.profileData.profile);
   const [loading, setLoading] = useState(false);
@@ -122,4 +122,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Profile;

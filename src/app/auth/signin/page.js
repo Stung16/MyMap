@@ -13,7 +13,7 @@ import Cookies from "js-cookie";
 import { handleLogin, handleLoginWithGoogle } from "@/services/auth.service";
 import Client from "@/config/Client";
 import Loading from "@/components/mymap/Loading/Loading";
-const page = () => {
+const Signin = () => {
   const token = Cookies.get("accessToken");
   const refres = Cookies.get("refreshToken");
   const router = useRouter();
@@ -143,4 +143,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Signin;
