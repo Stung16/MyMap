@@ -95,6 +95,7 @@ const Favorite = () => {
       nodes: node_3,
       edges: [],
       edge_type: "default",
+    
     };
     try {
       dispatch(updateLoading(true));
